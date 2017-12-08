@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Fun</title>
+
+        <!-- Angular -->
+        <script src="vendors/angular/angular.js"></script>
+        <script src="vendors/angular-route/angular-route.js"></script>
+    
+        <!-- Scripts -->
+        <script src="scripts/client.js"></script>
+    
+        <!-- Controllers -->
+        <script src="scripts/controllers/listings.controller.js"></script>
+        <script src="scripts/controllers/rentals.controller.js"></script>
+        <!-- Services -->
+        <script src="scripts/services/listings.service.js"></script>
+        <script src="scripts/services/rentals.service.js"></script>    
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */
+    
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+    
+            /* Add a gray background color and some padding to the footer */
+    
+            footer {
+                background-color: #f2f2f2;
+                padding: 25px;
+            }
+        </style>
+</head>
+<body ng-app="RealEstateApp">
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#!listings">Listings</a>
+                        <a class="navbar-brand" href="#!rentals">Rentals</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                    </div>
+                </div>
+            </nav>
+<ng-view></ng-view>
+</body>
+</html>
