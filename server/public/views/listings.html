@@ -1,10 +1,28 @@
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>Listings</h1>
+        <h1>For Sale</h1>
     </div>
 </div>
 
-
+{{vm.message}}
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Property ID</th>
+            <th>Cost</th>
+            <th>Square Feet</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="listing in vm.listings.list">
+            <td>{{listing._id}}</td>
+            <td>{{listing.cost}}</td>
+            <td>{{listing.sqft}}</td>
+            <td>{{listing.city}}</td>
+        </tr>
+    </tbody>
+</table>
 <!-- <h2>Search Movies?</h2>
 <input type="text" placeholder="Movie Title" ng-model="vm.searchTerm.string">
 <button ng-click="vm.searchMovie(vm.searchTerm)">Search!</button>

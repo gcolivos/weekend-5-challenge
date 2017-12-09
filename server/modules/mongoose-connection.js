@@ -2,7 +2,7 @@ function connect() {
     
         var mongoose = require('mongoose');
     
-        var databaseUrl = 'mongodb://localhost:27017/movie_database';
+        var databaseUrl = 'mongodb://localhost:27017/realestate';
         mongoose.connect(databaseUrl);
     
         mongoose.connection.on('connected', function () {
