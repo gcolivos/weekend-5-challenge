@@ -1,5 +1,5 @@
 app.controller('AddController', function () {
     var self = this;
-    self.message = ""
-
+    self.message = "";
+    self.showDiv = "";
 });

@@ -5,12 +5,12 @@
 </div>
 
 <div class="inline-block text-center">
-    <button type="button" class="btn btn-warning" ng-click="hidePropertyAdd = !hidePropertyAdd">Add A Property to Sell?</button>
-    <button type="button" class="btn btn-danger" ng-click="hideRentalAdd = !hideRentalAdd">Add A Property to Rent?</button>
+    <button type="button" class="btn btn-warning" ng-click="showDiv = 'sellView'">Add A Property to Sell?</button>
+    <button type="button" class="btn btn-danger" ng-click="showDiv = 'rentView'">Add A Property to Rent?</button>
 </div>
 
 <!-- Div class for if new listing is selected -->
-<div ng-controller="ListingsController as vm" ng-show="hidePropertyAdd">
+<div ng-controller="ListingsController as vm" ng-show="showDiv == 'sellView'">
     <H2>{{vm.message}}</H2>
     <div class="form-group">
         <label for="vm.newListing._id">Property ID?</label>
@@ -26,7 +26,7 @@
 </div>
 
 <!-- Div class for if new rental is selected -->
-<div ng-controller="RentalsController as vm" ng-show="hideRentalAdd">
+<div ng-controller="RentalsController as vm" ng-show="showDiv == 'rentView'">
     <H2>{{vm.message}}</H2>
     <div class="form-group">
         <label for="vm.newRental._id">Property ID?</label>
