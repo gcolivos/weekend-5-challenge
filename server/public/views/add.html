@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Add A Property</h1>
+    </div>
+</div>
+
+<div class="inline-block text-center">
+    <button type="button" class="btn btn-warning" ng-click="hidePropertyAdd = !hidePropertyAdd">Add A Property to Sell?</button>
+    <button type="button" class="btn btn-danger" ng-click="hideRentalAdd = !hideRentalAdd">Add A Property to Rent?</button>
+</div>
+
+<!-- Div class for if new listing is selected -->
+<div ng-controller="ListingsController as vm" ng-show="hidePropertyAdd">
+    <H2>{{vm.message}}</H2>
+    <div class="form-group">
+        <label for="vm.newListing._id">Property ID?</label>
+        <input type="text" ng-model="vm.newListing._id" placeholder="Property ID" class="form-control">
+        <label for="vm.newListing.cost">Cost?</label>
+        <input type="text" ng-model="vm.newListing.cost" placeholder="Cost" class="form-control">
+        <label for="vm.newListing.sqft">Square Feet?</label>
+        <input type="number" ng-model="vm.newListing.sqft" placeholder="Square Feet" class="form-control">
+        <label for="vm.newListing.city">City?</label>
+        <input type="text" ng-model="vm.newListing.city" placeholder="City" class="form-control">
+    </div>
+    <button ng-click="vm.addNewListing(vm.newListing)">Add New Property For Sale</button>
+</div>
+
+<!-- Div class for if new rental is selected -->
+<div ng-controller="RentalsController as vm" ng-show="hideRentalAdd">
+    <H2>{{vm.message}}</H2>
+    <div class="form-group">
+        <label for="vm.newRental._id">Property ID?</label>
+        <input type="text" ng-model="vm.newRental._id" placeholder="Property ID" class="form-control">
+        <label for="vm.newRental.rent">Rental Cost (annual)?</label>
+        <input type="text" ng-model="vm.newRental.rent" placeholder="Rent" class="form-control">
+        <label for="vm.newRental.sqft">Square Feet?</label>
+        <input type="number" ng-model="vm.newRental.sqft" placeholder="Square Feet" class="form-control">
+        <label for="vm.newRental.city">City?</label>
+        <input type="text" ng-model="vm.newRental.city" placeholder="City" class="form-control">
+    </div>
+    <button ng-click="vm.addNewRental(vm.newRental)">Add New Property For Rent</button>
+</div>

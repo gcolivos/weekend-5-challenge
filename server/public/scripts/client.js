@@ -8,8 +8,11 @@ app.config(function($routeProvider) {
     }).when('/rentals', {
         templateUrl: '/views/rentals.html',
         controller: 'RentalsController as vm'
-    }).when('/home', {
-        redirectTo: '/'
+    }).when('/add', {
+        templateUrl: '/views/add.html',
+        controller: 'AddController as vm'
+    }).when('/', {
+        redirectTo: '/listings'
     }).otherwise({
         template: '<h1>404</h1>'
     });

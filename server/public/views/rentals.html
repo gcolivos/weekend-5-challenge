@@ -1,5 +1,24 @@
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>Rentals</h1>
+        <h1>For Rent</h1>
     </div>
 </div>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Property ID</th>
+            <th>Rent</th>
+            <th>Square Feet</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center" ng-repeat="rental in vm.rentals.list">
+            <td>{{rental._id}}</td>
+            <td>{{rental.rent}}</td>
+            <td>{{rental.sqft}}</td>
+            <td>{{rental.city}}</td>
+        </tr>
+    </tbody>
+</table>

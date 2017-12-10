@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var mongooseConnection = require('./modules/mongoose-connection');
 
 var listing = require('./routes/listings')
+var rental = require('./routes/rentals')
 
 var port = process.env.PORT || 5000;
 
@@ -13,6 +14,7 @@ app.use(express.static('server/public'));
 mongooseConnection.connect();
 
 app.use('/listings', listing);
+app.use('/rentals', rental);
 
 app.listen(port, function(){
     console.log('listening on port', port);  
