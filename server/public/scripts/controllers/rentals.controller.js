@@ -4,5 +4,6 @@ app.controller('RentalsController', ['RentalsService', function (RentalsService)
     self.message = "Add A Property For Rent";
     self.rentals = RentalsService.rentals;
     self.addNewRental = RentalsService.addNewRental;
+    self.deleteRental = RentalsService.deleteRental;
 }
 ]);

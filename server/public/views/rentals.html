@@ -11,6 +11,7 @@
             <th>Rent</th>
             <th>Square Feet</th>
             <th>City</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +20,7 @@
             <td>{{rental.rent | currency}}</td>
             <td>{{rental.sqft | number}}</td>
             <td>{{rental.city}}</td>
-            <td><button class="btn btn-danger" ng-click="Delete($index)">Delete</button></td>            
+            <td><button class="btn btn-danger" ng-click="vm.deleteRental(rental)">Delete</button></td>            
         </tr>
     </tbody>
 </table>

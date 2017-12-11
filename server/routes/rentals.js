@@ -19,9 +19,8 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
     console.log('/rentals post')
-    var rentalToAdd = new Rental (req.body);
-
-  rentalToAdd.save(function(errorMakingDatabaseQuery,data){
+    var rentalToAdd = new Rental(req.body);
+    rentalToAdd.save(function (errorMakingDatabaseQuery, data) {
         if (errorMakingDatabaseQuery) {
             console.log('error', errorMakingDatabaseQuery);
             res.sendStatus(500);
@@ -30,6 +29,20 @@ router.post('/', function (req, res) {
         }
 
     });
+});
+
+router.delete('/:id', function (req, res) {
+    var rentalToDeleteID = req.params.id;
+    console.log('/delete post, rentalToDeleteID is equal to ' + rentalToDeleteID);
+    Rental.findByIdAndRemove(rentalToDeleteID, function (errorMakingDatabaseQuery, data) {
+        if (errorMakingDatabaseQuery) {
+            console.log('error', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            console.log(rentalToDeleteID + " successfully deleted")
+            res.sendStatus(200);
+        }
+    })
 });
 
 module.exports = router;
