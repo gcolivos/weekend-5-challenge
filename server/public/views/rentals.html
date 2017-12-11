@@ -16,9 +16,10 @@
     <tbody>
         <tr class="text-center" ng-repeat="rental in vm.rentals.list">
             <td>{{rental._id}}</td>
-            <td>{{rental.rent}}</td>
-            <td>{{rental.sqft}}</td>
+            <td>{{rental.rent | currency}}</td>
+            <td>{{rental.sqft | number}}</td>
             <td>{{rental.city}}</td>
+            <td><button class="btn btn-danger" ng-click="Delete($index)">Delete</button></td>            
         </tr>
     </tbody>
 </table>

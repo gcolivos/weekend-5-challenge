@@ -28,6 +28,7 @@ app.service('RentalsService', ['$http', function($http){
             data:  newRental
         }).then(function (response) {
             self.getRentals();
+            self.confirmation();
             self.newRental._id = '';
             self.newRental.rent = '';
             self.newRental.sqft = '';
@@ -37,4 +38,7 @@ app.service('RentalsService', ['$http', function($http){
 
     self.getRentals();
     
+    self.confirmation = function(){
+        window.alert("Rental Property Added!")
+    }
 }]);

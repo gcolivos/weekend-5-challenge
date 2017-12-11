@@ -28,6 +28,7 @@ app.service('ListingsService', ['$http', function($http){
             data:  newListing
         }).then(function (response) {
             self.getListings();
+            self.confirmation();
             self.newListing._id = '';
             self.newListing.cost = '';
             self.newListing.sqft = '';
@@ -35,6 +36,21 @@ app.service('ListingsService', ['$http', function($http){
         })
     };
 
+    self.deleteListing = function (listing) {
+        console.log(listing._id);
+        $http({
+            method: 'DELETE',
+            url: '/listings/' + listing._id
+        }).then(function (response) {
+            console.log('response from the router', response);
+            window.alert("Property deleted");
+            self.getListings();
+        });
+    };
+
     self.getListings();
 
+    self.confirmation = function() {
+        window.alert("Property For Sale Added!")
+    };
 }]);

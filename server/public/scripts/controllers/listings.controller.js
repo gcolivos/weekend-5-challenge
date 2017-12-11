@@ -4,5 +4,6 @@ app.controller('ListingsController', ['ListingsService', function (ListingsServi
     self.message = "Add A Property For Sale"
     self.listings = ListingsService.listings
     self.addNewListing = ListingsService.addNewListing;
+    self.deleteListing = ListingsService.deleteListing;
 }
 ]);
