@@ -13,8 +13,7 @@ router.get('/', function (req, res) {
             console.log(data);
             res.send(data);
         }
-
-    });
+    }).sort( { rent: +1 });;;
 });
 
 router.post('/', function (req, res) {

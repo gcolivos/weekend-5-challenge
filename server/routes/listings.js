@@ -13,8 +13,7 @@ router.get('/', function (req, res) {
             console.log(data);
             res.send(data);
         }
-
-    });
+    }).sort( { cost: +1 });;
 });
 
 router.post('/', function (req, res) {
