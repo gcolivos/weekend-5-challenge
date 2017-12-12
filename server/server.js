@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var mongooseConnection = require('./modules/mongoose-connection');
+require('./modules/mongoose-connection');
 
 var listing = require('./routes/listings')
 var rental = require('./routes/rentals')
