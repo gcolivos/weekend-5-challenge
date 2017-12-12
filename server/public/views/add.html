@@ -13,8 +13,6 @@
 <div ng-controller="ListingsController as vm" ng-show="showDiv == 'sellView'">
     <H2>{{vm.message}}</H2>
     <div class="form-group">
-        <label for="vm.newListing._id">Property ID?</label>
-        <input type="text" ng-model="vm.newListing._id" placeholder="Property ID" class="form-control">
         <label for="vm.newListing.cost">Cost?</label>
         <input type="text" ng-model="vm.newListing.cost" placeholder="Cost" class="form-control">
         <label for="vm.newListing.sqft">Square Feet?</label>
@@ -29,8 +27,6 @@
 <div ng-controller="RentalsController as vm" ng-show="showDiv == 'rentView'">
     <H2>{{vm.message}}</H2>
     <div class="form-group">
-        <label for="vm.newRental._id">Property ID?</label>
-        <input type="text" ng-model="vm.newRental._id" placeholder="Property ID" class="form-control">
         <label for="vm.newRental.rent">Rental Cost (annual)?</label>
         <input type="text" ng-model="vm.newRental.rent" placeholder="Rent" class="form-control">
         <label for="vm.newRental.sqft">Square Feet?</label>

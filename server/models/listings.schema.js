@@ -5,11 +5,9 @@ var Schema = mongoose.Schema;
 // this will enforce our object properties
 
 var listingSchema = new Schema({
-    _id: {type: String, required: true, unique: true},
     cost: {type: Number},
     sqft: { type: Number},
     city: {type: String},
-    __v: {type: Number}
 });
 
 module.exports = mongoose.model('Listing', listingSchema);

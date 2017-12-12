@@ -11,12 +11,10 @@
             <th>Rent</th>
             <th>Square Feet</th>
             <th>City</th>
-            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         <tr class="text-center" ng-repeat="rental in vm.rentals.list">
-            <td>{{rental._id}}</td>
             <td>{{rental.rent | currency}}</td>
             <td>{{rental.sqft | number}}</td>
             <td>{{rental.city}}</td>

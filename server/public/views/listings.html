@@ -11,12 +11,10 @@
             <th>Cost</th>
             <th>Square Feet</th>
             <th>City</th>
-            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         <tr class="text-center" ng-repeat="listing in vm.listings.list">
-            <td>{{listing._id}}</td>
             <td>{{listing.cost | currency}}</td>
             <td>{{listing.sqft | number}}</td>
             <td>{{listing.city}}</td>
