@@ -5,6 +5,7 @@ var Rental = require('../models/rentals.schema')
 router.get('/', function (req, res) {
     // a get request for all listings
     console.log("In the get function. Req = " + req);
+    console.log(req)
     Rental.find({}, function (errorMakingDatabaseQuery, data) {
         if (errorMakingDatabaseQuery) {
             console.log('error with rental find', errorMakingDatabaseQuery);
