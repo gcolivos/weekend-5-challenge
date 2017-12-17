@@ -1,15 +1,23 @@
 Name of Application: Real Estate Done Right
 
 Description:
-Simple Real Estate listings application allowing the adding or deletion of properties either for sale or for rent.
+Simple real estate listings application allowing the adding or deletion of properties either for sale or for rent.
 
-Getting Started
+Built With:
+-Angular
+-Node
+-Mongo
+-Mongoose
+-Express
+-Bootstrap
+-Angular-Route
+
+Getting Started:
 
 Pre-requisites
 -Node
 -Mongo
 -Express
--Angular
 
 Installing
 1. Download this project.
@@ -20,11 +28,26 @@ Installing
 a)   "main": "server/server.js",
 b)   "start" (under "scripts"): "node server/server.js"
 
+Screenshots:
 
--    "angular": "^1.6.7",
-    "angular-route": "^1.6.7",
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.18.2",
-    "bootstrap": "^3.3.7",
-    "express": "^4.16.2",
-    "mongoose": "^4.13.6"
+![Property List](images/propertyList.png)
+![Adding a Property] (images/addProperty.png)
+
+Documentation:
+
+Scope Document
+N/A
+
+Completed Features
+Add Listing, Delete Listing, Sorted Lowest To Highest
+
+Next Steps
+Add Sort/Filter option for listings
+
+Author
+Guillermo C Olivos
+
+Acknowledgements
+-My instructor at Prime, Luke Schlangen
+-Prime Digital Academy
+
